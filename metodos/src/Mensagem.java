@@ -37,6 +37,7 @@ public class Mensagem {
                 break;
             default:
                 System.out.println("Horário Inválido");
+                break;
         }
     }
 }

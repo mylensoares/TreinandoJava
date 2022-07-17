@@ -19,7 +19,11 @@ public class Calculadora {
     }
 
     public void divisao(int num1, int num2){
+        if (num2 != 0){
         divisao = num1 / num2;
         System.out.println("A divisão entre " + num1 + " e " + num2 + " é " + divisao);
+        }else{
+            System.out.println("Não é possível realizar divisão por 0");
+        }
     }
 }

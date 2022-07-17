@@ -1,9 +1,10 @@
 import java.util.Scanner;
 
-public class App {
+public class Main {
     public static void main(String[] args) throws Exception {
 
         // Calculadora com operações básicas
+        System.out.println("===============Calculadora===============");
         Calculadora calc = new Calculadora();
         Scanner leia = new Scanner(System.in);
 
@@ -21,10 +22,25 @@ public class App {
         
 
         // Mensagem
+        System.out.println("===============Mensagem===============");
         Mensagem mens = new Mensagem();
         System.out.print("Informe o horário atual (formato 24h): ");
         mens.hora = leia.nextInt();
         mens.obterMensagem(mens.hora);
+
+        // Simulador de Empréstimo
+        System.out.println("===============Empréstimo===============");
+        Emprestimo emp = new Emprestimo();
+
+        System.out.print("Valor do Empréstimo: ");
+        emp.valor = leia.nextDouble();
+        
+        System.out.print("Quantidade de Parcelas: ");
+        emp.parcelas = leia.nextInt();
+
+        emp.valorFinal(emp.valor, emp.parcelas);
+
+
         leia.close();
     }
 
